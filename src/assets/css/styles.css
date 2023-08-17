@@ -139,8 +139,9 @@ body.active {
     padding-inline: 15px;
 }
 
-
 /* ------------------------------ header -------------------------------------*/
+
+/* set the initial style of the header */
 .header {
     --color: var(--white);
     --btn-color: var(--champagne-pink);
@@ -154,6 +155,9 @@ body.active {
     z-index: 4;
 }
 
+/* create the style of the header when active */
+/* use position relative to position based on the viewport*/
+/* change the defined variables for colors */
 .header.active {
     --color: var(--rich-black-fogra-29);
     --btn-color: var(--rich-black-fogra-29);
@@ -165,11 +169,14 @@ body.active {
     animation: slideIn 0.5s ease-out forwards;
 }
 
+/* set the animation of the header when active*/
 @keyframes slideIn {
     0% {transform: translateY(0);}
     100% {transform: translateY(100%);}
 }
 
+/* set the header container with displat flex in order to 
+position the elements */
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -177,6 +184,7 @@ body.active {
     gap: 20px;
 }
 
+/* style the logo elements */
 .logo {
     color: var(--color);
     font-family: var(--ff-rubik);
@@ -190,11 +198,13 @@ body.active {
     color: var(--deep-saffron) ;
 }
 
+/* style the button group */
 .header-btn-group {
     display: flex;
     align-items: center;
 }
 
+/* style the button that shows the navbar */
 .nav-toggle-btn {
     display: grid;
     gap: 4px;
@@ -216,6 +226,7 @@ body.active {
     margin-left: auto;
 }
 
+/* set the transform to transition when active */
 .nav-toggle-btn.active .line.top {
     transform: translate(1px, 3px) rotate(45deg);
 }
@@ -228,6 +239,7 @@ body.active {
     transform: translate(-1px, -3px) rotate(45deg);
 }
 
+/* style the navbar of the header*/
 .navbar {
     position: absolute;
     top: 100%;
@@ -248,6 +260,7 @@ body.active {
     visibility: visible;
 }
 
+/* style the list of elements of the navbar */
 .navbar-list {
     height: 100%;
     display: flex;
@@ -262,6 +275,7 @@ body.active {
     border-block-end: 1px solid hsla(0, 0%, 0%, 0.04);
 }
 
+/* style the links of the navbar list of options */
 .navbar-link {
     color: var(--rich-black-fogra-29);
     font-size: var(--fs-4);
