@@ -204,6 +204,50 @@ body.active {
     --scale: 500;    
 }
 
+.section {
+    padding-block: var(--section-padding);
+}
+
+.section.white {
+    background-color: var(--isabelline);
+}
+
+.section-divider {
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background-repeat: repeat no-repeat;
+    background-position: bottom;
+}
+
+.section-divider.white::after {
+    background-image: url(/src/assets/images/shape-white.png);
+}
+
+.section-divider.grey::after {
+    background-image: url(/src/assets/images/shape-grey.png);
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.has-scrollbar {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-block-end: 40px;
+    scroll-snap-type: inline mandatory;
+}
+
 /* ------------------------------ header -------------------------------------*/
 
 /* set the initial style of the header */
@@ -361,6 +405,8 @@ position the elements */
 
 /* ------------------- main ---------------------------------------*/
 
+/* hero - home */
+
 .hero {
     background-image: url(/src/assets/images/hero-bg.jpg);
     background-repeat: no-repeat;
@@ -401,4 +447,66 @@ position the elements */
 .hero .btn:is(:hover, :focus) {
     background-color: var(--white);
     color: var(--black);
+}
+
+/* promo section*/
+
+.promo-card {
+    position: relative;
+    background-color: var(--white);
+    text-align: center;
+    padding: 40px 30px;
+    box-shadow: var(--shadow-2);
+    z-index: 1;
+}
+
+.promo-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--deep-saffron);
+    clip-path: var(--clip-path-1);
+    transform: scaleY(0.3);
+    transform-origin: bottom;
+    z-index: -1;
+    transition: var(--transition-1);
+}
+
+.promo-card:hover::after {
+    clip-path: var(--clip-path-2);
+    transform: scaleY(1);
+}
+
+.promo-card .card-icon img {
+    margin-inline: auto;
+}
+
+.promo-card:hover .card-icon img {
+    background-color: var(--white);
+    border-radius: 40%;
+}
+
+.promo-card .card-title {
+    margin-block: 15px;
+    transition: var(--transition-1);
+}
+
+.promo-card:hover :is(.card-title, .card-text){
+    color: var(--white);
+}
+
+.promo-card .card-text {
+    margin-block-end: 15px;
+    transition: var(--transition-1);
+}
+
+.promo-card .card-banner {
+    max-width: max-content;
+    margin-inline: auto;
+    aspect-ratio: 1 / 1;
+}
+
+.promo-item {
+    min-width: 100%;
+    scroll-snap-align: start;
 }
