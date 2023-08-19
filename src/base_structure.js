@@ -74,9 +74,8 @@ header.appendChild(headerContainer);
 
 content.appendChild(header);
 
-/* ----------------------------- main content ------------------------------- */
-
-
+const main = document.createElement("main");
+content.appendChild(main);
 
 /* ----------------------------- dom listeners ------------------------------ */
 
@@ -100,3 +99,5 @@ window.addEventListener("scroll", function () {
   if (window.scrollY >= 100) header.classList.add("active");
   else header.classList.remove("active");
 });
+
+export default main;

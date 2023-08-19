@@ -193,7 +193,7 @@ body.active {
     left: 20px;
     width: 1px;
     height: 1px;
-    transform: translate(-50%, 50%) scale(var(--scale, 1));
+    transform: scale(var(--scale, 1));
     border-radius: 50%;
     background-color: var(--rich-black-fogra-29);
     z-index: -1;
@@ -245,6 +245,8 @@ body.active {
     gap: 10px;
     overflow-x: auto;
     padding-block-end: 40px;
+
+    /* scroll slider property of the container element */
     scroll-snap-type: inline mandatory;
 }
 

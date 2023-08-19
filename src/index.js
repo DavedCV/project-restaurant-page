@@ -1,2 +1,5 @@
 import "./assets/css/styles.css";
-import "./initial_page.js";
+import main from "./base_structure.js";
+import articleHome from "./home.js";
+
+main.appendChild(articleHome);
