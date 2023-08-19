@@ -538,6 +538,10 @@ position the elements */
 
 /* ------------------------------- about section --------------------------*/
 
+article .about {
+    padding-block-start: 145px;
+}
+
 .about {
     text-align: center;
 }
