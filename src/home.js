@@ -214,7 +214,6 @@ window.addEventListener("scroll", () => {
       deliveryBoyMove--;
     }
 
-    console.log(deliveryBoyMove);
     lastScrollPos = activeScrollPos;
     deliveryBoyImage.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
