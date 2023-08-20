@@ -704,3 +704,32 @@ article .about {
 .food-menu-card .del {
     color: var(--gray-x-11-gray);
 }
+
+/* -------------------------- delivery section -------------------------------*/
+
+.delivery-content {
+    margin-block-end: 40px;
+}
+
+.delivery .section-title {
+    max-width: 17ch;
+    line-height: 1.6;
+    letter-spacing: -2px;
+    }
+
+.delivery .section-text {
+    margin-block: 15px 25px;
+}
+
+.delivery-banner {
+    position: relative;
+    aspect-ratio: 1/ 0.86;
+}
+
+.delivery-banner .delivery-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-80px);
+    transform: var(--transition-2)
+}
