@@ -185,6 +185,10 @@ container3.appendChild(deliverySectionFigure);
 // add the container to the delivery section
 deliverySection.appendChild(container3);
 
+/* ------------------------- testimonials section ----------------------------*/
+
+
+
 /* --------------------- add sections to the article ------------------------ */
 
 articleHome.appendChild(heroSection);
