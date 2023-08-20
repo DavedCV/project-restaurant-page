@@ -127,37 +127,93 @@ container2.appendChild(ulPromo);
 // add the container to the section
 promoSection.appendChild(container2);
 
+/* ---------------------------- delivery section -----------------------------*/
+
+const deliverySection = document.createElement("section");
+deliverySection.setAttribute("class", "section section-divider gray delivery");
+
+const container3 = document.createElement("div");
+container3.classList.add("container");
+
+// delivery content
+const deliveryContent = document.createElement("div");
+deliveryContent.classList.add("delivery-content");
+
+const deliverySectionTitle = document.createElement("h2");
+deliverySectionTitle.setAttribute("class","h2 section-title");
+deliverySectionTitle.innerHTML = "A Moments Of Delivered On <span class='span'>Right Time</span> & Place";
+deliveryContent.appendChild(deliverySectionTitle);
+
+const deliverySectionText = document.createElement("p");
+deliverySectionText.classList.add("section-text");
+deliverySectionText.textContent =
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla, earum?";
+deliveryContent.appendChild(deliverySectionText);
+
+const deliverySectionButton = document.createElement("button");
+deliverySectionButton.setAttribute("class","btn btn-hover");
+deliverySectionButton.textContent = "Order Now";
+deliveryContent.appendChild(deliverySectionButton);
+
+// delivery banner
+const deliverySectionFigure = document.createElement("figure");
+deliverySectionFigure.classList.add("delivery-banner");
+
+const deliveryBanner = document.createElement("img");
+deliveryBanner.src = "/src/assets/images/delivery-banner-bg.png";
+deliveryBanner.width = "700";
+deliveryBanner.height = "602";
+deliveryBanner.loading = "lazy";
+deliveryBanner.alt = "clouds";
+deliveryBanner.classList.add("w-100");
+deliverySectionFigure.appendChild(deliveryBanner);
+
+const deliveryBoyImage = document.createElement("img");
+deliveryBoyImage.src = "/src/assets/images/delivery-boy.svg";
+deliveryBoyImage.width = "1000";
+deliveryBoyImage.height = "880";
+deliveryBoyImage.loading = "lazy";
+deliveryBoyImage.alt = "delivery boy";
+deliveryBoyImage.setAttribute("data-delivery-boy", "");
+deliveryBoyImage.setAttribute("class", "w-100 delivery-img");
+deliverySectionFigure.appendChild(deliveryBoyImage);
+
+// add items to the container
+container3.appendChild(deliveryContent);
+container3.appendChild(deliverySectionFigure);
+
+// add the container to the delivery section
+deliverySection.appendChild(container3);
+
 /* --------------------- add sections to the article ------------------------ */
 
 articleHome.appendChild(heroSection);
 articleHome.appendChild(promoSection);
+articleHome.appendChild(deliverySection);
 
 /* ------------------------- event listeners ---------------------------------*/
 
 // move the cycle on scroll
 
-const deliveryBoy = document.querySelector("[data-delivery-boy]");
-
 let deliveryBoyMove = -80;
 let lastScrollPos = 0;
 
 window.addEventListener("scroll", () => {
-
-  let deliveryBoyTopPos = deliveryBoy.getBoundingClientRect().top;
+  let deliveryBoyTopPos = deliveryBoyImage.getBoundingClientRect().top;
 
   if (deliveryBoyTopPos < 500 && deliveryBoyTopPos > -250) {
     let activeScrollPos = window.scrollY;
 
     if (lastScrollPos < activeScrollPos) {
       deliveryBoyMove++;
-    }else{
+    } else {
       deliveryBoyMove--;
     }
 
+    console.log(deliveryBoyMove);
     lastScrollPos = activeScrollPos;
-    deliveryBoy.style.transform = `translateX(${deliveryBoyMove}px)`;
+    deliveryBoyImage.style.transform = `translateX(${deliveryBoyMove}px)`;
   }
-
 });
 
 export default articleHome;
