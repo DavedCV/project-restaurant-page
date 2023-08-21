@@ -1,5 +1,5 @@
 import "./assets/css/styles.css";
-import { main, navbarLinks, header } from "./base_structure.js";
+import { main, navbarLinks, header } from "./header.js";
 import homeArticle from "./home.js";
 import aboutArticle from "./about.js";
 import menuArticle from "./menu.js";

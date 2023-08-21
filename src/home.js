@@ -18,14 +18,14 @@ heroContent.classList.add("hero-content");
 // elements of the hero content
 const heroSubtitle = document.createElement("p");
 heroSubtitle.classList.add("hero-subtitle");
-heroSubtitle.textContent = "Eat Sleep And";
+heroSubtitle.textContent = "Burguer = Love <3";
 const heroTitle = document.createElement("h2");
 heroTitle.setAttribute("class", "h1 hero-title");
-heroTitle.textContent = "Super healthy food in town!";
+heroTitle.textContent = "Super delicious food in town!";
 const heroText = document.createElement("p");
 heroText.classList.add("hero-text");
 heroText.textContent =
-  "Food is the fuel for our life, eat healthy and love yourself.";
+  "Food is the fuel for our life, eat good and love yourself.";
 const heroButton = document.createElement("button");
 heroButton.classList.add("btn");
 heroButton.textContent = "See the menu!";
@@ -212,7 +212,7 @@ testimonialsSectionTitle.innerHTML =
 const testimonialsSectionText = document.createElement("p");
 testimonialsSectionText.classList.add("section-text");
 testimonialsSectionText.textContent =
-  "Food is any substance consumed to provide nutritional support for an organism.";
+  "Food is the fuel for our life, eat good and love yourself.";
 
 // testimonials list
 const testimonialsList = document.createElement("ul");

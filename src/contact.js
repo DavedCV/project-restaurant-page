@@ -23,7 +23,7 @@ logo.innerHTML = 'Restaurant <span class="span">.</span>';
 const contactText = document.createElement("p");
 contactText.classList.add("contact-text");
 contactText.textContent =
-  "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, non.";
+  "Food is any substance consumed to provide nutritional suport for an organism.";
 
 const socialList = document.createElement("ul");
 socialList.classList.add("social-list");
@@ -109,7 +109,6 @@ for (let i = 0; i < 4; i++) {
     content.classList.add("contact-list-item");
   }
 
-  content = document.createElement("p");
   content.textContent = contactList2Info[i];
 
   li.appendChild(content);
@@ -147,7 +146,7 @@ inputEmail.setAttribute("required", "");
 inputWrapper1.appendChild(inputEmail);
 
 const inputWrapper2 = document.createElement("div");
-inputWrapper1.classList.add("input-wrapper");
+inputWrapper2.classList.add("input-wrapper");
 
 const select = document.createElement("select");
 select.classList.add("input-field");
