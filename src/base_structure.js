@@ -28,6 +28,7 @@ headerNavbar.setAttribute("data-navbar", "");
 headerNavbar.classList.add("navbar");
 
 const navbarList = document.createElement("ul");
+navbarList.classList.add("navbar-list");
 const navbarOptions = ["Home", "About", "Menu", "Contact"];
 const navbarLinks = [];
 for (let option of navbarOptions) {

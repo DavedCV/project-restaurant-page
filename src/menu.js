@@ -59,8 +59,8 @@ for (let i = 0; i < 6; i++) {
   cardBannerImage.width = "300";
   cardBannerImage.height = "300";
   cardBannerImage.loading = "lazy";
-  cardBanner.classList.add("w-100");
-  cardBanner.alt = foodNames[i];
+  cardBannerImage.classList.add("w-100");
+  cardBannerImage.alt = foodNames[i];
   cardBanner.appendChild(cardBannerImage);
 
   const cardBannerBadge = document.createElement("div");
