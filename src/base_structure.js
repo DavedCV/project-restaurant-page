@@ -101,4 +101,4 @@ window.addEventListener("scroll", function () {
   else header.classList.remove("active");
 });
 
-export { main, navbarLinks};
+export { main, navbarLinks, header};

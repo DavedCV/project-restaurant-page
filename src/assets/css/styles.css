@@ -556,6 +556,9 @@ position the elements */
 
 article .about {
     padding-block-start: 145px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .about {
@@ -1073,6 +1076,10 @@ textarea.input-field {
     }
 
     /* header ----------------*/
+    .header.active{
+        top: -102px;
+    }
+
     .nav-toggle-btn {
         display: none;
     }
@@ -1126,9 +1133,6 @@ textarea.input-field {
 
     .hero-banner {
         max-width: 45%;
-        top: auto;
-        bottom: 0;
-        transform: translateY(0);
     }
 
     .hero-img-bg {

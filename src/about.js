@@ -5,7 +5,7 @@ const aboutArticle = document.createElement("article");
 /* -------------------------- about section ----------------------------------*/
 
 const aboutSection = document.createElement("section");
-aboutSection.setAttribute("class", "section section-divider gray about");
+aboutSection.setAttribute("class", "section section-divider white about");
 aboutSection.id = "about";
 
 const container = document.createElement("div");

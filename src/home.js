@@ -140,8 +140,9 @@ const deliveryContent = document.createElement("div");
 deliveryContent.classList.add("delivery-content");
 
 const deliverySectionTitle = document.createElement("h2");
-deliverySectionTitle.setAttribute("class","h2 section-title");
-deliverySectionTitle.innerHTML = "A Moments Of Delivered On <span class='span'>Right Time</span> & Place";
+deliverySectionTitle.setAttribute("class", "h2 section-title");
+deliverySectionTitle.innerHTML =
+  "A Moments Of Delivered On <span class='span'>Right Time</span> & Place";
 deliveryContent.appendChild(deliverySectionTitle);
 
 const deliverySectionText = document.createElement("p");
@@ -151,7 +152,7 @@ deliverySectionText.textContent =
 deliveryContent.appendChild(deliverySectionText);
 
 const deliverySectionButton = document.createElement("button");
-deliverySectionButton.setAttribute("class","btn btn-hover");
+deliverySectionButton.setAttribute("class", "btn btn-hover");
 deliverySectionButton.textContent = "Order Now";
 deliveryContent.appendChild(deliverySectionButton);
 
@@ -188,7 +189,10 @@ deliverySection.appendChild(container3);
 /* ------------------------- testimonials section ----------------------------*/
 
 const testimonialsSection = document.createElement("section");
-testimonialsSection.setAttribute("class", "section section-divider white testi");
+testimonialsSection.setAttribute(
+  "class",
+  "section section-divider white testi",
+);
 
 const container4 = document.createElement("div");
 container4.classList.add("container");
@@ -201,18 +205,20 @@ testimonialsSectionSubtitle.textContent = "Testimonials";
 // section title
 const testimonialsSectionTitle = document.createElement("h2");
 testimonialsSectionTitle.setAttribute("class", "h2 section-title");
-testimonialsSectionTitle.innerHTML = "Our Customers <span class='span'>Reviews</span>";
+testimonialsSectionTitle.innerHTML =
+  "Our Customers <span class='span'>Reviews</span>";
 
 // section text
 const testimonialsSectionText = document.createElement("p");
 testimonialsSectionText.classList.add("section-text");
-testimonialsSectionText.textContent = "Food is any substance consumed to provide nutritional support for an organism.";
+testimonialsSectionText.textContent =
+  "Food is any substance consumed to provide nutritional support for an organism.";
 
-// testimonials list 
+// testimonials list
 const testimonialsList = document.createElement("ul");
 testimonialsList.setAttribute("class", "testi-list has-scrollbar");
 
-const userTile = ["CEO KingFisher", "CEO Getforce", "CEO Angela"]
+const userTile = ["CEO KingFisher", "CEO Getforce", "CEO Angela"];
 for (let i = 0; i < 3; i++) {
   const li = document.createElement("li");
   li.classList.add("testi-item");
@@ -227,17 +233,17 @@ for (let i = 0; i < 3; i++) {
   const avatar = document.createElement("figure");
   avatar.classList.add("avatar");
   const avatarImage = document.createElement("img");
-  avatarImage.src = `/src/assets/images/avatar-${i+1}.jpg`;
+  avatarImage.src = `/src/assets/images/avatar-${i + 1}.jpg`;
   avatarImage.width = "80";
   avatarImage.height = "80";
   avatarImage.loading = "lazy";
-  avatarImage.alt = `User${i+1}`;
+  avatarImage.alt = `User${i + 1}`;
   avatar.appendChild(avatarImage);
-  
+
   const userInfo = document.createElement("div");
   const userName = document.createElement("h3");
-  userName.setAttribute("class","h4 testi-name");
-  userName.textContent = `User ${i+1}`;
+  userName.setAttribute("class", "h4 testi-name");
+  userName.textContent = `User ${i + 1}`;
   userInfo.appendChild(userName);
   const userTitle = document.createElement("p");
   userTitle.classList.add("testi-title");
@@ -250,7 +256,8 @@ for (let i = 0; i < 3; i++) {
   // blackquote
   const blackquote = document.createElement("blackquote");
   blackquote.classList.add("testi-text");
-  blackquote.textContent = '"I would be lost without restaurant. I would like to personally thank you for your outstanding product."';
+  blackquote.textContent =
+    '"I would be lost without restaurant. I would like to personally thank you for your outstanding product."';
 
   // rating wrapper
   const ratingWrapper = document.createElement("div");
@@ -259,7 +266,7 @@ for (let i = 0; i < 3; i++) {
     const item = document.createElement("i");
     item.setAttribute("class", "fa-solid fa-star");
     ratingWrapper.appendChild(item);
-  } 
+  }
 
   // add items to the card
   testiCard.appendChild(profileWrapper);
