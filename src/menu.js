@@ -1,3 +1,14 @@
+/* ---------------------------- import images --------------------------------*/
+
+import bannerImage1 from "/src/assets/images/food-menu-1.png";
+import bannerImage2 from "/src/assets/images/food-menu-2.png";
+import bannerImage3 from "/src/assets/images/food-menu-3.png";
+import bannerImage4 from "/src/assets/images/food-menu-4.png";
+import bannerImage5 from "/src/assets/images/food-menu-5.png";
+import bannerImage6 from "/src/assets/images/food-menu-6.png";
+
+const bannerImages = [bannerImage1, bannerImage2, bannerImage3, bannerImage4, bannerImage5, bannerImage6];
+
 /* ------------------------ food menu section --------------------------------*/
 
 const menuArticle = document.createElement("article");
@@ -55,7 +66,7 @@ for (let i = 0; i < 6; i++) {
   cardBanner.classList.add("card-banner");
 
   const cardBannerImage = document.createElement("img");
-  cardBannerImage.src = `/src/assets/images/food-menu-${i + 1}.png`;
+  cardBannerImage.src = bannerImages[i];
   cardBannerImage.width = "300";
   cardBannerImage.height = "300";
   cardBannerImage.loading = "lazy";

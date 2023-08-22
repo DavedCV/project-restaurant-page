@@ -1,3 +1,29 @@
+/* ------------------------- import images ---------------------------------- */
+
+import image1 from "/src/assets/images/hero-banner-bg.png";
+import image2 from "/src/assets/images/hero-banner.png";
+import image3 from "/src/assets/images/delivery-banner-bg.png";
+import image4 from "/src/assets/images/delivery-boy.svg";
+
+import imageIcon1 from "/src/assets/images/promo-icon-1.svg";
+import imageIcon2 from "/src/assets/images/promo-icon-2.svg";
+import imageIcon3 from "/src/assets/images/promo-icon-3.svg";
+import imageIcon4 from "/src/assets/images/promo-icon-4.svg";
+import imageIcon5 from "/src/assets/images/promo-icon-5.svg";
+const iconImages = [imageIcon1, imageIcon2, imageIcon3, imageIcon4, imageIcon5];
+
+import imagePromo1 from "/src/assets/images/promo-1.png";
+import imagePromo2 from "/src/assets/images/promo-2.png";
+import imagePromo3 from "/src/assets/images/promo-3.png";
+import imagePromo4 from "/src/assets/images/promo-4.png";
+import imagePromo5 from "/src/assets/images/promo-5.png";
+const promoImages = [imagePromo1, imagePromo2, imagePromo3, imagePromo4, imagePromo5];
+
+import imageAvatar1 from "/src/assets/images/avatar-1.jpg"
+import imageAvatar2 from "/src/assets/images/avatar-2.jpg"
+import imageAvatar3 from "/src/assets/images/avatar-3.jpg"
+const avatarImages = [imageAvatar1, imageAvatar2, imageAvatar3];
+
 /* --------------------------- home article ----------------------------------*/
 
 const articleHome = document.createElement("article");
@@ -40,14 +66,14 @@ const heroFigure = document.createElement("figure");
 heroFigure.classList.add("hero-banner");
 
 const heroBannerBg = document.createElement("img");
-heroBannerBg.src = "/src/assets/images/hero-banner-bg.png";
+heroBannerBg.src = image1;
 heroBannerBg.setAttribute("class", "w-100 hero-img-bg");
 heroBannerBg.width = "820";
 heroBannerBg.height = "716";
 heroBannerBg.loading = "lazy";
 
 const heroBanner = document.createElement("img");
-heroBanner.src = "/src/assets/images/hero-banner.png";
+heroBanner.src = image2;
 heroBanner.alt = "Burguer";
 heroBanner.setAttribute("class", "w-100 hero-img");
 heroBannerBg.width = "700";
@@ -92,7 +118,7 @@ for (let i = 0; i < 5; i++) {
   const cardIcon = document.createElement("div");
   cardIcon.classList.add("card-icon");
   const cardIconImg = document.createElement("img");
-  cardIconImg.src = `/src/assets/images/promo-icon-${i + 1}.svg`;
+  cardIconImg.src = iconImages[i];
   cardIcon.appendChild(cardIconImg);
 
   const cardTitle = document.createElement("h3");
@@ -105,7 +131,7 @@ for (let i = 0; i < 5; i++) {
     "Food is any substance consumed to provide nutritional suport for an organism.";
 
   const cardImage = document.createElement("img");
-  cardImage.src = `/src/assets/images/promo-${i + 1}.png`;
+  cardImage.src = promoImages[i];
   cardImage.alt = productName[i];
   cardImage.height = "300";
   cardImage.width = "300";
@@ -161,7 +187,7 @@ const deliverySectionFigure = document.createElement("figure");
 deliverySectionFigure.classList.add("delivery-banner");
 
 const deliveryBanner = document.createElement("img");
-deliveryBanner.src = "/src/assets/images/delivery-banner-bg.png";
+deliveryBanner.src = image3;
 deliveryBanner.width = "700";
 deliveryBanner.height = "602";
 deliveryBanner.loading = "lazy";
@@ -170,7 +196,7 @@ deliveryBanner.classList.add("w-100");
 deliverySectionFigure.appendChild(deliveryBanner);
 
 const deliveryBoyImage = document.createElement("img");
-deliveryBoyImage.src = "/src/assets/images/delivery-boy.svg";
+deliveryBoyImage.src = image4;
 deliveryBoyImage.width = "1000";
 deliveryBoyImage.height = "880";
 deliveryBoyImage.loading = "lazy";
@@ -233,7 +259,7 @@ for (let i = 0; i < 3; i++) {
   const avatar = document.createElement("figure");
   avatar.classList.add("avatar");
   const avatarImage = document.createElement("img");
-  avatarImage.src = `/src/assets/images/avatar-${i + 1}.jpg`;
+  avatarImage.src = avatarImages[i];
   avatarImage.width = "80";
   avatarImage.height = "80";
   avatarImage.loading = "lazy";

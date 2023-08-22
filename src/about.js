@@ -1,3 +1,8 @@
+/* ----------------------------- import images -------------------------------*/
+
+import image1 from "/src/assets/images/about-banner.png";
+import image2 from "/src/assets/images/sale-shape-red.png";
+
 /* -------------------------- about section ----------------------------------*/
 
 const aboutArticle = document.createElement("article");
@@ -16,7 +21,7 @@ const aboutBanner = document.createElement("div");
 aboutBanner.classList.add("about-banner");
 
 const imgFoodBanner = document.createElement("img");
-imgFoodBanner.src = "/src/assets/images/about-banner.png";
+imgFoodBanner.src = image1;
 imgFoodBanner.alt = "Burgier with drinks";
 imgFoodBanner.setAttribute("class", "w-100 about-img");
 imgFoodBanner.width = "509";
@@ -25,7 +30,7 @@ imgFoodBanner.loading = "lazy";
 aboutBanner.appendChild(imgFoodBanner);
 
 const imgSaleBanner = document.createElement("img");
-imgSaleBanner.src = "/src/assets/images/sale-shape-red.png";
+imgSaleBanner.src = image2;
 imgSaleBanner.alt = "Get up 50% off now";
 imgSaleBanner.setAttribute("class", "abs-img scale-up-anim");
 imgSaleBanner.width = "216";
